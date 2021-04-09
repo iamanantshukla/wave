@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "98418755515",
+    "project_id": "wave-cdf96",
+    "storage_bucket": "wave-cdf96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98418755515:android:9b6f4b0d786259cfb0269e",
+        "android_client_info": {
+          "package_name": "com.dev334.wave"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98418755515-l4hpqe490mmmrqu33nl3jeubpng4gmpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlRpta9RLIKpBhfzTty7FvhreAnZopnCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98418755515-l4hpqe490mmmrqu33nl3jeubpng4gmpg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
