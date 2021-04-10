@@ -45,6 +45,7 @@ public class CreateProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
+        getSupportActionBar().hide();
 
         EditName=findViewById(R.id.EditName);
         EditOrg=findViewById(R.id.EditOrg);
@@ -124,6 +125,8 @@ public class CreateProfile extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(CreateProfile.this, "Profile Created", Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(CreateProfile.this, HomeActivity.class);
+                startActivity(i);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

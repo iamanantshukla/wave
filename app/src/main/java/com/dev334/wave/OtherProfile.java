@@ -77,7 +77,11 @@ public class OtherProfile extends AppCompatActivity {
             }
         }
         String url=userModel.getProfilePic();
-        Picasso.get().load(url).into(profilePic);
+        if(url.isEmpty()){
+            profilePic.setImageResource(R.drawable.profile);
+        }else {
+            Picasso.get().load(url).into(profilePic);
+        }
 
         STATUS=userFirebase.checkStatus();
         if(STATUS==0){
