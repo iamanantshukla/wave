@@ -45,7 +45,7 @@ public class CreateProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         EditName=findViewById(R.id.EditName);
         EditOrg=findViewById(R.id.EditOrg);
