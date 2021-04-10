@@ -110,7 +110,7 @@
             android:fontFamily="@font/nunitosemibold"
             android:text="Forgot password?"
             android:textAlignment="textEnd"
-            android:textColor="@color/LightGrey" />
+            android:textColor="@color/Primary" />
 
         <TextView
             android:id="@+id/textView6"

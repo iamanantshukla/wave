@@ -1,9 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Primary"
     tools:context=".CreateProfile">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <EditText
+            android:id="@+id/EditName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/outline_primary_btn"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="4dp"
+            android:ems="10"
+            android:fontFamily="@font/nunitobold"
+            android:hint="Name*"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:textColor="@color/Primary"
+            android:textColorHint="@color/Primary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/EditOrg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="42dp"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/outline_primary_btn"
+            android:drawableLeft="@drawable/ic_baseline_place_24"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/nunitobold"
+            android:hint="Organisation*"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:textColor="@color/Primary"
+            android:textColorHint="@color/Primary"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/EditFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/outline_primary_btn"
+            android:drawableLeft="@drawable/ic_baseline_facebook_24"
+            android:drawablePadding="4dp"
+            android:ems="10"
+            android:fontFamily="@font/nunitobold"
+            android:hint="Facebook "
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:textColor="@color/Primary"
+            android:textColorHint="@color/Primary"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/EditInsta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/outline_primary_btn"
+            android:drawableLeft="@drawable/ic_instagram"
+            android:drawablePadding="4dp"
+            android:ems="10"
+            android:fontFamily="@font/nunitoregular"
+            android:hint="Instagram "
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:textColor="@color/Primary"
+            android:textColorHint="@color/Primary"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/EditInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="42dp"
+            android:background="@drawable/outline_primary_btn"
+            android:drawableLeft="@drawable/ic_baseline_sports_esports_24"
+            android:drawablePadding="4dp"
+            android:focusableInTouchMode="false"
+            android:ems="10"
+            android:fontFamily="@font/nunitoregular"
+            android:hint="Interest"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:textColor="@color/Primary"
+            android:textColorHint="@color/Primary"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunitoregular"
+        android:text="Create Profile"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/outline_primary_btn"
+        android:fontFamily="@font/nunitobold"
+        android:text="Create"
+        android:textColor="@color/Secondary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/nunitobold"
+        android:text="Use your orginal name so that your colleagues can find you"
+        android:textColor="@color/Primary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
