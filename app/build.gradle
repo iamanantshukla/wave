@@ -58,5 +58,5 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.20"
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
     implementation 'id.zelory:compressor:2.1.0'
-
+    implementation ('org.jitsi.react:jitsi-meet-sdk:2.+') { transitive = true }
 }
