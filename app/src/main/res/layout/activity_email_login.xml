@@ -4,116 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Dark"
+    android:background="@drawable/background_gradient"
     tools:context=".EmailLogin">
-
-    <LinearLayout
-        android:id="@+id/linearPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:transitionName="phoneTransition"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearEmail">
-
-        <TextView
-            android:id="@+id/PhoneHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/nunitoblack"
-            android:text="Last step of Authentication"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnOTP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
-            android:layout_marginEnd="72dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/theme_filled_btn"
-            android:fontFamily="@font/nunitobold"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="Send OTP"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/EditPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/theme_outline_btn"
-            android:ems="10"
-            android:fontFamily="@font/poppinsregular"
-            android:hint="Phone number"
-            android:inputType="number"
-            android:paddingLeft="16dp"
-            android:paddingTop="10dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/Light"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/EditOTP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/theme_outline_btn"
-            android:ems="10"
-            android:fontFamily="@font/poppinsregular"
-            android:hint="OTP"
-            android:inputType="text"
-            android:paddingLeft="16dp"
-            android:paddingTop="10dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/Light"
-            android:textSize="18sp" />
-
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/textView_code"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="20dp"
-            app:ccp_arrowColor="@color/Light"
-            app:ccp_contentColor="@color/Light"
-            app:ccp_textGravity="CENTER" />
-
-        <TextView
-            android:id="@+id/OTPStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:text="@string/AlreadyAccount"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageBackground1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="0.3"
-        android:scaleType="centerCrop"
-        android:transitionName="background"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mainbackground"
-        tools:visibility="gone" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnNext"
@@ -121,29 +13,27 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/theme_filled_btn"
-        android:fontFamily="@font/poppinsbold"
+        android:background="@drawable/blue_rounded_btn"
+        android:fontFamily="@font/nunitosemibold"
         android:gravity="center"
         android:paddingStart="36dp"
         android:paddingTop="8dp"
         android:paddingEnd="36dp"
         android:paddingBottom="8dp"
+        android:elevation="12dp"
         android:text="Next"
-        android:textColor="@color/Dark"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:transitionName="nextTransition"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
+    <ImageView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="bee."
+        android:src="@drawable/ic_launcher_foreground"
         android:transitionName="logoTransition"
-        android:textColor="@color/Theme"
-        android:textSize="42sp"
         app:layout_constraintBottom_toTopOf="@+id/linearEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,9 +53,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:fontFamily="@font/poppinsmedium"
+            android:fontFamily="@font/nunitosemibold"
             android:text="@string/HeaderSignUp"
-            android:textColor="@color/white"
+            android:textColor="@color/Secondary"
             android:textSize="18sp" />
 
         <EditText
@@ -175,17 +65,18 @@
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/theme_outline_btn"
+            android:background="@drawable/outline_primary_btn"
             android:drawableStart="@drawable/ic_baseline_email_24"
             android:ems="10"
-            android:fontFamily="@font/poppinsregular"
+            android:fontFamily="@font/nunitoregular"
             android:hint="Email"
+            android:drawablePadding="8dp"
             android:inputType="textEmailAddress"
-            android:paddingLeft="16dp"
+            android:paddingLeft="8dp"
             android:paddingTop="10dp"
             android:paddingRight="16dp"
             android:paddingBottom="10dp"
-            android:textColor="@color/Light"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
@@ -195,18 +86,19 @@
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/theme_outline_btn"
+            android:background="@drawable/outline_primary_btn"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"
             android:ems="10"
-            android:fontFamily="@font/poppinsregular"
+            android:fontFamily="@font/nunitoregular"
             android:hint="Password"
             android:inputType="textPassword"
-            android:paddingLeft="16dp"
+            android:paddingLeft="8dp"
+            android:drawablePadding="8dp"
             android:paddingTop="10dp"
             android:paddingRight="16dp"
             android:paddingBottom="10dp"
-            android:textColor="@color/Light"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <TextView
@@ -215,19 +107,19 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="16dp"
-            android:fontFamily="@font/poppinsmedium"
+            android:fontFamily="@font/nunitosemibold"
             android:text="Forgot password?"
             android:textAlignment="textEnd"
-            android:textColor="@color/Light" />
+            android:textColor="@color/LightGrey" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:fontFamily="@font/poppinsmedium"
+            android:fontFamily="@font/nunitosemibold"
             android:text="OR"
-            android:textColor="@color/white"
+            android:textColor="@color/Primary"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -236,14 +128,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
+            android:elevation="12dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/theme_filled_btn"
-            android:fontFamily="@font/poppinsbold"
+            android:background="@drawable/rounded_primary_btn"
+            android:fontFamily="@font/nunitosemibold"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="Google"
-            android:textColor="@color/Dark"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -251,8 +144,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="48dp"
-            android:fontFamily="@font/poppinsmedium"
-            android:text="@string/AlreadyAccount"
+            android:fontFamily="@font/nunitosemibold"
+            android:text="Already have an account? Click Here"
+            android:textColor="@color/Primary"
             android:textSize="16sp" />
 
     </LinearLayout>
