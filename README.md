@@ -6,7 +6,7 @@
 
 
 ## Introduction:
-  Intro of the project
+    Wave
   
 ## Demo Video Link:
   <a href="https://youtu.be/dQw4w9WgXcQ">https://youtu.be/dQw4w9WgXcQ</a>
@@ -26,7 +26,7 @@
 
 ## Contributors:
 
-Team Name: OP Squad
+Team Name: Dev 334
 
 * [Anant Shukla](https://github.com/iamanantshukla)
 * [Darpan Mittal](https://github.com/darpan1107)
