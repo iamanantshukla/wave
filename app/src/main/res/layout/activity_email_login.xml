@@ -13,14 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/blue_rounded_btn"
+        android:background="@drawable/rounded_primary_btn"
         android:fontFamily="@font/nunitosemibold"
         android:gravity="center"
         android:paddingStart="36dp"
         android:paddingTop="8dp"
         android:paddingEnd="36dp"
         android:paddingBottom="8dp"
-        android:elevation="12dp"
+        android:elevation="16dp"
         android:text="Next"
         android:textColor="@color/white"
         android:textSize="18sp"
@@ -55,7 +55,7 @@
             android:layout_marginBottom="24dp"
             android:fontFamily="@font/nunitosemibold"
             android:text="@string/HeaderSignUp"
-            android:textColor="@color/Secondary"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
@@ -65,7 +65,7 @@
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/outline_primary_btn"
+            android:background="@drawable/grey_outline_btn"
             android:drawableStart="@drawable/ic_baseline_email_24"
             android:ems="10"
             android:fontFamily="@font/nunitoregular"
@@ -86,7 +86,7 @@
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/outline_primary_btn"
+            android:background="@drawable/grey_outline_btn"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"
             android:ems="10"
@@ -110,7 +110,7 @@
             android:fontFamily="@font/nunitosemibold"
             android:text="Forgot password?"
             android:textAlignment="textEnd"
-            android:textColor="@color/LightGrey" />
+            android:textColor="@color/Secondary" />
 
         <TextView
             android:id="@+id/textView6"
@@ -119,24 +119,30 @@
             android:layout_marginBottom="24dp"
             android:fontFamily="@font/nunitosemibold"
             android:text="OR"
-            android:textColor="@color/Primary"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnGoogle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
-            android:elevation="12dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/rounded_primary_btn"
+            android:background="@drawable/grey_outline_btn"
+            android:drawableLeft="@drawable/ic_search"
+            android:elevation="16dp"
             android:fontFamily="@font/nunitosemibold"
             android:gravity="center"
+            android:paddingStart="72dp"
             android:paddingTop="10dp"
+            android:paddingEnd="72dp"
             android:paddingBottom="10dp"
+            android:shadowColor="@color/Secondary"
             android:text="Google"
-            android:textColor="@color/white"
+            android:drawablePadding="12dp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <TextView
@@ -146,7 +152,7 @@
             android:layout_marginBottom="48dp"
             android:fontFamily="@font/nunitosemibold"
             android:text="Already have an account? Click Here"
-            android:textColor="@color/Primary"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
     </LinearLayout>
