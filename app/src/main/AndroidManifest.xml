@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Wave">
-
         <activity android:name=".ChooseInterest"/>
         <activity android:name=".ChooseOrganisation" />
         <activity android:name=".CreateProfile" />
@@ -19,6 +18,7 @@
         <activity android:name=".HomeActivity"/>
         <activity android:name=".VideoCall">
         <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
