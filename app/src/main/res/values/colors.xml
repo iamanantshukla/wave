@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Grey">#707070</color>
-    <color name="LightBlue">#8cb8ef</color>
-    <color name="LightGrey">#748ca9</color>
-    <color name="Secondary">#7263ae</color>
-    <color name="Primary">#497cc3</color>
-    <color name="LightSecondary">#9792cb</color>
+    <color name="Light">#FEFEFC</color>
+    <color name="SecondaryLight">#F6F8F5</color>
+    <color name="Dark">#040309</color>
+    <color name="SecondaryDark">#535167</color>
+    <color name="Primary">#3552ED</color>
+    <color name="Secondary">#5502AF</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="alphaPrimary">#667263ae</color>
-    <color name="alpha2Primary">#B37263ae</color>
+    <color name="alphaPrimary">#66040309</color>
+    <color name="alpha2Primary">#B3040309</color>
+    <color name="Font">#555D50</color>
 </resources>
