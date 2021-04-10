@@ -169,8 +169,8 @@ public class profileFragment extends Fragment {
 
         //Edit Profile
         BtnEditProf.setOnClickListener(v->{
-            Intent i=new Intent(getActivity(), EditProfile.class);
-            startActivity(i);
+            //Intent i=new Intent(getActivity(), EditProfile.class);
+            //startActivity(i);
         });
 
         //setUpProfile();
