@@ -3,11 +3,11 @@
     <style name="Theme.Wave" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/Primary</item>
-        <item name="colorPrimaryVariant">@color/LightBlue</item>
+        <item name="colorPrimaryVariant">@color/SecondaryDark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/Secondary</item>
-        <item name="colorSecondaryVariant">@color/LightSecondary</item>
+        <item name="colorSecondaryVariant">@color/SecondaryLight</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>

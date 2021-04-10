@@ -21,6 +21,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dev334.wave.Database.TinyDB;
+import com.dev334.wave.InterestBrowse;
+import com.dev334.wave.OtherProfile;
 import com.dev334.wave.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -180,20 +182,20 @@ public class homeFragment extends Fragment implements  UserAdapter.SelectedPager
         titles=new ArrayList<>();
         mImages=new ArrayList<>();
         categoryAdapter=new  CategoryAdapter(getContext(),titles,mImages,this);
-        mImages.add(R.drawable.dance);
-        mImages.add(R.drawable.music);
-        mImages.add(R.drawable.photography);
-        mImages.add(R.drawable.design);
-        mImages.add(R.drawable.tvshows);
-        mImages.add(R.drawable.dramatics);
-        mImages.add(R.drawable.reading);
-        mImages.add(R.drawable.dance);
-        mImages.add(R.drawable.music);
-        mImages.add(R.drawable.photography);
-        mImages.add(R.drawable.tvshows);
-        mImages.add(R.drawable.dramatics);
-        mImages.add(R.drawable.reading);
-        mImages.add(R.drawable.dance);
+//        mImages.add(R.drawable.dance);
+//        mImages.add(R.drawable.music);
+//        mImages.add(R.drawable.photography);
+//        mImages.add(R.drawable.design);
+//        mImages.add(R.drawable.tvshows);
+//        mImages.add(R.drawable.dramatics);
+//        mImages.add(R.drawable.reading);
+//        mImages.add(R.drawable.dance);
+//        mImages.add(R.drawable.music);
+//        mImages.add(R.drawable.photography);
+//        mImages.add(R.drawable.tvshows);
+//        mImages.add(R.drawable.dramatics);
+//        mImages.add(R.drawable.reading);
+//        mImages.add(R.drawable.dance);
 
 
 

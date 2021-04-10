@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.Home.SearchUsersTags">
+    tools:context=".Home.SearchUsersTags">
 
     <EditText
         android:id="@+id/searchBar"
@@ -19,7 +19,7 @@
         android:background="@drawable/searchbar"
         android:drawableEnd="@drawable/ic_baseline_search_24"
         android:ems="10"
-        android:fontFamily="@font/sf_light"
+        android:fontFamily="@font/nunitoregular"
         android:hint="Looking for friends?"
         android:inputType="textPersonName"
         android:paddingStart="16dp"
