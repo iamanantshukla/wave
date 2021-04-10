@@ -41,20 +41,22 @@ public class EmailLogin extends AppCompatActivity {
     private View parentLayout;
     private GoogleSignInOptions gso;
     private GoogleSignInClient mGoogleSignInClient;
-    private LinearLayout emailLayout, phoneLayout;
+    private LinearLayout emailLayout;
     private int RC_SIGN_IN=101;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_login);
+        getSupportActionBar().hide();
+        getWindow().setEnterTransition(null);
 
         //transition Time period
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().getSharedElementEnterTransition().setDuration(800);
-            getWindow().getSharedElementReturnTransition().setDuration(800)
-                    .setInterpolator(new DecelerateInterpolator());
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            getWindow().getSharedElementEnterTransition().setDuration(800);
+//            getWindow().getSharedElementReturnTransition().setDuration(800)
+//                    .setInterpolator(new DecelerateInterpolator());
+//        }
 
         parentLayout=findViewById(android.R.id.content);
 
@@ -70,7 +72,6 @@ public class EmailLogin extends AppCompatActivity {
         Header=findViewById(R.id.TextHeader);
         footer=findViewById(R.id.textStatus);
         emailLayout=findViewById(R.id.linearEmail);
-        phoneLayout=findViewById(R.id.linearPhone);
 
 
         footer.setOnClickListener(new View.OnClickListener() {
@@ -139,8 +140,7 @@ public class EmailLogin extends AppCompatActivity {
                                         i.putExtra("email",Email);
                                         i.putExtra("password", Password);
                                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(EmailLogin.this,
-                                                new Pair<View, String>(emailLayout, "emailTransition"),
-                                                new Pair<View, String>(phoneLayout, "phoneTransition"));
+                                                new Pair<View, String>(emailLayout, "emailTransition"));
                                         startActivity(i, options.toBundle());
                                     }else{
                                         Toast.makeText(getApplicationContext(),"Verify your email", Toast.LENGTH_SHORT).show();

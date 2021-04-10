@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">wave</string>
-    <string name="Tagline"><font color="#FFFEFC">Bringing people </font> <font color='#FFC400'>closer </font>than ever</string>
-    <string name="AlreadyAccount"><font color="#FFFEFC">Already have an account? </font> <font color='#FFC400'>Click here </font></string>
-    <string name="NewAccount"><font color="#FFFEFC">New Here? </font> <font color='#FFC400'>Click here </font></string>
-    <string name="HeaderSignUp">Sign up using email or google</string>
+    <string name="Tagline"><font color="#000000">Bringing people </font> <font color='#7263ae'>closer </font>than ever</string>
+    <string name="AlreadyAccount"><font color="#000000">Already have an account? </font> <font color='#7263ae'>Click here </font></string>
+    <string name="NewAccount"><font color="#000000">New Here? </font> <font color='#7263ae'>Click here </font></string>
+    <string name="HeaderSignUp">Sign up using email</string>
     <string name="HeaderLogin">Sign in using email or google</string>
     <string name="title_activity_home">MainActivity</string>
     <string name="title_home">Home</string>

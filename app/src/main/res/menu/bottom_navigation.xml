@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_outline_home_24"
+        app:cnb_textColor="@color/black"
+        app:cnb_iconColor="@color/black"
+        app:cnb_backgroundColor="@color/white"/>
+
+    <item
+        android:id="@+id/nav_msg"
+        android:title="Message"
+        android:icon="@drawable/ic_outline_message_24"
+        app:cnb_textColor="@color/black"
+        app:cnb_iconColor="@color/black"
+        app:cnb_backgroundColor="@color/white"/>
+
+    <item
+        android:id="@+id/nav_vid"
+        android:title="Video"
+        android:icon="@drawable/ic_outline_videocam_24"
+        app:cnb_textColor="@color/black"
+        app:cnb_iconColor="@color/black"
+        app:cnb_backgroundColor="@color/white"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_outline_person_24"
+        app:cnb_textColor="@color/black"
+        app:cnb_iconColor="@color/black"
+        app:cnb_backgroundColor="@color/white"/>
+
+
+
+</menu>
