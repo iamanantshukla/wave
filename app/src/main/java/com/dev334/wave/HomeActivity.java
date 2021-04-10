@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 
+import com.dev334.wave.Home.VideoCallFragment;
 import com.dev334.wave.Home.homeFragment;
 import com.dev334.wave.Home.messageFragment;
 import com.dev334.wave.Home.profileFragment;
@@ -18,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     private profileFragment profileFrag;
     private messageFragment msgFrag;
     private FragmentManager fragmentManager;
-
+    private VideoCallFragment videoCallFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
         homeFrag=new homeFragment();
         profileFrag=new profileFragment();
         msgFrag=new messageFragment();
+        videoCallFragment=new VideoCallFragment();
         bottomNavigation=findViewById(R.id.bottom_navigation_bar);
 
         fragmentManager=getSupportFragmentManager();
@@ -47,6 +49,8 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.nav_profile:
                         replaceFragment(profileFrag);
                         break;
+                    case R.id.nav_vid:
+                         replaceFragment(videoCallFragment);
                     default:
                         replaceFragment(homeFrag);
                         break;

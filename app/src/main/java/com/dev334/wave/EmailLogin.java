@@ -135,7 +135,7 @@ public class EmailLogin extends AppCompatActivity {
 
                                     if(mAuth.getCurrentUser().isEmailVerified()){
                                         Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                                        Intent i = new Intent(EmailLogin.this, EmailLogin.class);
+                                        Intent i = new Intent(EmailLogin.this, SplashScreen.class);
                                         i.putExtra("Method",0);
                                         i.putExtra("email",Email);
                                         i.putExtra("password", Password);
@@ -203,7 +203,7 @@ public class EmailLogin extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Snackbar.make(parentLayout,"Login Successful",Snackbar.LENGTH_SHORT);
-                            Intent i=new Intent(EmailLogin.this, EmailLogin.class);
+                            Intent i=new Intent(EmailLogin.this,SplashScreen.class);
                             i.putExtra("Method",1);
                             i.putExtra("GoogleIDToken",idToken);
                             startActivity(i);

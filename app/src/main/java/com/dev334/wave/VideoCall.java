@@ -24,8 +24,6 @@ public class VideoCall extends AppCompatActivity {
         getSupportActionBar().hide();
         secretCode=findViewById(R.id.code);
         joinBtn=findViewById(R.id.join);
-        shareBtn=findViewById(R.id.share);
-
         URL serverURL;
 
         try{
