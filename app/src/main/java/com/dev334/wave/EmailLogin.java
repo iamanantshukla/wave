@@ -48,7 +48,7 @@ public class EmailLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_login);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
         getWindow().setEnterTransition(null);
 
         //transition Time period
