@@ -4,8 +4,10 @@
     <color name="LightBlue">#8cb8ef</color>
     <color name="LightGrey">#748ca9</color>
     <color name="Secondary">#7263ae</color>
-    <color name="Primary">#9792cb</color>
-    <color name="Blue">#497cc3</color>
+    <color name="Primary">#497cc3</color>
+    <color name="LightSecondary">#9792cb</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="alphaPrimary">#667263ae</color>
+    <color name="alpha2Primary">#B37263ae</color>
 </resources>
