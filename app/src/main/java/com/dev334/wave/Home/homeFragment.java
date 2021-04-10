@@ -182,20 +182,20 @@ public class homeFragment extends Fragment implements  UserAdapter.SelectedPager
         titles=new ArrayList<>();
         mImages=new ArrayList<>();
         categoryAdapter=new  CategoryAdapter(getContext(),titles,mImages,this);
-//        mImages.add(R.drawable.dance);
-//        mImages.add(R.drawable.music);
-//        mImages.add(R.drawable.photography);
-//        mImages.add(R.drawable.design);
-//        mImages.add(R.drawable.tvshows);
-//        mImages.add(R.drawable.dramatics);
-//        mImages.add(R.drawable.reading);
-//        mImages.add(R.drawable.dance);
-//        mImages.add(R.drawable.music);
-//        mImages.add(R.drawable.photography);
-//        mImages.add(R.drawable.tvshows);
-//        mImages.add(R.drawable.dramatics);
-//        mImages.add(R.drawable.reading);
-//        mImages.add(R.drawable.dance);
+        mImages.add(R.drawable.dance);
+        mImages.add(R.drawable.music);
+        mImages.add(R.drawable.photography);
+        mImages.add(R.drawable.design);
+        mImages.add(R.drawable.tvshows);
+        mImages.add(R.drawable.dramatics);
+        mImages.add(R.drawable.reading);
+        mImages.add(R.drawable.dance);
+        mImages.add(R.drawable.music);
+        mImages.add(R.drawable.photography);
+        mImages.add(R.drawable.tvshows);
+        mImages.add(R.drawable.dramatics);
+        mImages.add(R.drawable.reading);
+        mImages.add(R.drawable.dance);
 
 
 

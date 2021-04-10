@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Primary"
+    android:background="@color/white"
     tools:context=".CreateProfile">
 
     <LinearLayout
@@ -29,15 +28,15 @@
             android:drawableLeft="@drawable/ic_baseline_person_24"
             android:drawablePadding="4dp"
             android:ems="10"
-            android:fontFamily="@font/nunitobold"
+            android:fontFamily="@font/nunitoregular"
             android:hint="Name*"
             android:inputType="textPersonName"
             android:paddingStart="16dp"
             android:paddingTop="12dp"
             android:paddingEnd="16dp"
             android:paddingBottom="12dp"
-            android:textColor="@color/Primary"
-            android:textColorHint="@color/Primary"
+            android:textColor="@color/Dark"
+            android:textColorHint="@color/SecondaryDark"
             android:textSize="18sp" />
 
         <TextView
@@ -47,18 +46,18 @@
             android:layout_marginStart="42dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="42dp"
-            android:focusableInTouchMode="false"
             android:background="@drawable/outline_primary_btn"
             android:drawableLeft="@drawable/ic_baseline_place_24"
             android:drawablePadding="4dp"
-            android:fontFamily="@font/nunitobold"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/nunitoregular"
             android:hint="Organisation*"
             android:paddingStart="16dp"
             android:paddingTop="12dp"
             android:paddingEnd="16dp"
             android:paddingBottom="12dp"
-            android:textColor="@color/Primary"
-            android:textColorHint="@color/Primary"
+            android:textColor="@color/Dark"
+            android:textColorHint="@color/SecondaryDark"
             android:textSize="18sp" />
 
         <EditText
@@ -72,15 +71,15 @@
             android:drawableLeft="@drawable/ic_baseline_facebook_24"
             android:drawablePadding="4dp"
             android:ems="10"
-            android:fontFamily="@font/nunitobold"
+            android:fontFamily="@font/nunitoregular"
             android:hint="Facebook "
             android:inputType="textPersonName"
             android:paddingStart="16dp"
             android:paddingTop="12dp"
             android:paddingEnd="16dp"
             android:paddingBottom="12dp"
-            android:textColor="@color/Primary"
-            android:textColorHint="@color/Primary"
+            android:textColor="@color/Dark"
+            android:textColorHint="@color/SecondaryDark"
             android:textSize="18sp" />
 
         <EditText
@@ -101,8 +100,8 @@
             android:paddingTop="12dp"
             android:paddingEnd="16dp"
             android:paddingBottom="12dp"
-            android:textColor="@color/Primary"
-            android:textColorHint="@color/Primary"
+            android:textColor="@color/Dark"
+            android:textColorHint="@color/SecondaryDark"
             android:textSize="18sp" />
 
         <EditText
@@ -115,8 +114,8 @@
             android:background="@drawable/outline_primary_btn"
             android:drawableLeft="@drawable/ic_baseline_sports_esports_24"
             android:drawablePadding="4dp"
-            android:focusableInTouchMode="false"
             android:ems="10"
+            android:focusableInTouchMode="false"
             android:fontFamily="@font/nunitoregular"
             android:hint="Interest"
             android:inputType="textPersonName"
@@ -124,8 +123,8 @@
             android:paddingTop="12dp"
             android:paddingEnd="16dp"
             android:paddingBottom="12dp"
-            android:textColor="@color/Primary"
-            android:textColorHint="@color/Primary"
+            android:textColor="@color/Dark"
+            android:textColorHint="@color/SecondaryDark"
             android:textSize="18sp" />
 
     </LinearLayout>
@@ -136,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/nunitoregular"
+        android:fontFamily="@font/nunitosemibold"
         android:text="Create Profile"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -150,10 +149,10 @@
         android:layout_marginStart="72dp"
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/outline_primary_btn"
-        android:fontFamily="@font/nunitobold"
+        android:background="@drawable/rounded_primary_btn"
+        android:fontFamily="@font/nunitosemibold"
         android:text="Create"
-        android:textColor="@color/Secondary"
+        android:textColor="@color/Light"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -166,9 +165,9 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="48dp"
-        android:fontFamily="@font/nunitobold"
+        android:fontFamily="@font/nunitoregular"
         android:text="Use your orginal name so that your colleagues can find you"
-        android:textColor="@color/Primary"
+        android:textColor="@color/Dark"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

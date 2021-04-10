@@ -10,9 +10,11 @@
         android:id="@+id/pagerCoverImage"
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:src="@drawable/profile"
+        android:src="@drawable/ic_recycler_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:civ_border_color="@color/Primary"
+        app:civ_border_width="1dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
