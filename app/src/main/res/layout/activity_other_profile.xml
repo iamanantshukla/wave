@@ -178,5 +178,6 @@
         android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/oUsername"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/baseline_favorite_black_24dp" />
+        app:srcCompat="@drawable/baseline_favorite_black_24dp"
+        android:background="@color/SecondaryLight"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

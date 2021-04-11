@@ -56,18 +56,13 @@ public class VideoCallFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
     }
-
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_video_call, container, false);
         secretCode=view.findViewById(R.id.code);
         joinBtn=view.findViewById(R.id.join);
         URL serverURL;

@@ -20,6 +20,8 @@
         <activity android:name=".OtherProfile"/>
         <activity android:name=".ChooseInterest"/>
         <activity android:name=".ChooseOrganisation"/>
+        <activity android:name=".InterestBrowse"/>
+        <activity android:name=".ChatSocket.MainActivity"/>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

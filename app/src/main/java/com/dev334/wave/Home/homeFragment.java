@@ -38,7 +38,9 @@ import com.squareup.picasso.Target;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -59,6 +61,7 @@ public class homeFragment extends Fragment implements  UserAdapter.SelectedPager
     private CircleImageView circleImageView;
     private StorageReference storageReference;
     private TextView userSearch;
+    private Map<String, Object> map;
 
 
     @Override
@@ -70,6 +73,8 @@ public class homeFragment extends Fragment implements  UserAdapter.SelectedPager
         interest=new ArrayList<>();
         mAuth= FirebaseAuth.getInstance();
         storageReference= FirebaseStorage.getInstance().getReference();
+        map=new HashMap<>();
+        map=tinyDB.getObject("UserProfile", map.getClass());
 
     }
 
@@ -126,6 +131,7 @@ public class homeFragment extends Fragment implements  UserAdapter.SelectedPager
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         interest=tinyDB.getListString("UserInterest");
+
         fstore.collection("Users").whereArrayContainsAny("Interest",interest).limit(5).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

@@ -33,7 +33,7 @@ public class ChooseInterest extends AppCompatActivity implements organisationAda
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_interest);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         recyclerView=findViewById(R.id.intRecycler);
         EditInt=findViewById(R.id.editInterest);
