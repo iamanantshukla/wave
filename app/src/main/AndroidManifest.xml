@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dev334.wave">
 
@@ -9,6 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Wave">
+
         <activity android:name=".HomeActivity">
 
         </activity>
@@ -17,6 +17,7 @@
         <activity android:name=".EmailLogin" />
         <activity android:name=".VideoCall">
         </activity>
+
         <activity android:name=".OtherProfile"/>
         <activity android:name=".ChooseInterest"/>
         <activity android:name=".ChooseOrganisation"/>
@@ -24,10 +25,11 @@
         <activity android:name=".ChatSocket.MainActivity"/>
         <activity android:name=".SplashScreen">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter></activity>
+
     </application>
 
 </manifest>

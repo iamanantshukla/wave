@@ -21,12 +21,12 @@ public class VideoCall extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_call);
-        //getSupportActionBar().hide();
+
+        getSupportActionBar().hide();
+
 
         secretCode=findViewById(R.id.code);
         joinBtn=findViewById(R.id.join);
-        shareBtn=findViewById(R.id.share);
-
         URL serverURL;
 
         try{
