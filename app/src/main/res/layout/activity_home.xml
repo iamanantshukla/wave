@@ -18,10 +18,10 @@
         android:elevation="16dp"
         app:cnb_menuResource="@menu/bottom_navigation"
         app:cnb_orientationMode="horizontal"
-        app:cnb_unselectedColor="@color/black"
+        app:cnb_unselectedColor="@color/Light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
     </com.ismaeldivita.chipnavigation.ChipNavigationBar>
 

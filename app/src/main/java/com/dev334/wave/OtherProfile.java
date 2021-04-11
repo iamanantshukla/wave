@@ -46,7 +46,6 @@ public class OtherProfile extends AppCompatActivity {
         TextSkill1=findViewById(R.id.oprofileSkill1);
         TextSkill2=findViewById(R.id.oprofileSkill2);
         TextSkill3=findViewById(R.id.oprofileSkill3);
-        FRBtn=findViewById(R.id.oFRbtn);
         SCBtn=findViewById(R.id.oSCbtn);
 
         firestore= FirebaseFirestore.getInstance();
@@ -82,45 +81,6 @@ public class OtherProfile extends AppCompatActivity {
         }else {
             Picasso.get().load(url).into(profilePic);
         }
-
-        STATUS=userFirebase.checkStatus();
-        if(STATUS==0){
-            FRBtn.setText("Remove Friend");
-        }else if(STATUS==1){
-            FRBtn.setText("Pending Request");
-        }else if(STATUS==3){
-            FRBtn.setText("ACCEPT REQUEST");
-        }else{
-            FRBtn.setText("Send Friend Request");
-        }
-
-        FRBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                    if(STATUS==0){
-                        //Remove Friend
-                        userFirebase.RemoveFriend();
-                        FRBtn.setText("Send Friend Request");
-                        STATUS=2;
-                    }else if(STATUS==1){
-                        //Pending Request
-                        Toast.makeText(getApplicationContext(), "You have already requested", Toast.LENGTH_SHORT).show();
-                    }else if(STATUS==2){
-                        //Send Friend request
-                        userFirebase.sendFriendReq();
-                        FRBtn.setText("Pending Request");
-                        STATUS=1;
-                    }else if(STATUS==3){
-                        userFirebase.AcceptReq();
-                        FRBtn.setText("Remove Friend");
-                        STATUS=0;
-                    }
-
-                    else{
-                        Toast.makeText(getApplicationContext(), "None", Toast.LENGTH_SHORT).show();
-                    }
-            }
-        });
 
     }
 

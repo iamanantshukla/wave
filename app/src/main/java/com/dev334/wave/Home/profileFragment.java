@@ -150,14 +150,6 @@ public class profileFragment extends Fragment {
         ImageFB=view.findViewById(R.id.profFacebook);
         profilePic=view.findViewById(R.id.profileImage);
         BtnEditProf=view.findViewById(R.id.BtnEditProf);
-        FRbtn=view.findViewById(R.id.pFRbtn);
-
-        FRbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         //getting current userID
         UserID=mAuth.getCurrentUser().getUid();
