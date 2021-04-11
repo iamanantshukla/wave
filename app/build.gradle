@@ -61,4 +61,6 @@ dependencies {
     implementation 'id.zelory:compressor:2.1.0'
     implementation 'com.github.nkzawa:socket.io-client:0.3.0'
     implementation ('org.jitsi.react:jitsi-meet-sdk:2.+') { transitive = true }
+    implementation 'com.github.CanHub:Android-Image-Cropper:2.2.2'
+
 }
