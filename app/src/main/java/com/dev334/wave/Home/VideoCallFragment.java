@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -141,8 +142,9 @@ public class VideoCallFragment extends Fragment implements MeetingAdapter.Select
 
     @Override
     public void selectedpager(MeetingModel meetingModel) {
+//        Toast.makeText(getContext(), meetingModel.getCode(), Toast.LENGTH_SHORT).show();
         JitsiMeetConferenceOptions options=new JitsiMeetConferenceOptions.Builder()
-                .setRoom(meetingModel.getCode())
+                .setRoom(meetingModel.getCode().toString())
                 .setWelcomePageEnabled(false)
                 .build();
         JitsiMeetActivity.launch(getContext(),options);

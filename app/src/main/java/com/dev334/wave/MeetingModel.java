@@ -3,7 +3,7 @@ package com.dev334.wave;
 public class MeetingModel {
     private String Topic;
     private String Desc;
-    private String code;
+    private String Code;
     private String Org;
 
     public String getOrg() {
@@ -21,7 +21,7 @@ public class MeetingModel {
     public MeetingModel(String topic, String desc, String code, String Org) {
         Topic = topic;
         Desc = desc;
-        this.code = code;
+        this.Code = code;
         this.Org=Org;
     }
 
@@ -42,10 +42,10 @@ public class MeetingModel {
     }
 
     public String getCode() {
-        return code;
+        return Code;
     }
 
     public void setCode(String code) {
-        this.code = code;
+        this.Code = code;
     }
 }
