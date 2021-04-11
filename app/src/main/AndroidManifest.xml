@@ -8,6 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Wave">
+
         <activity android:name=".HomeActivity">
 
         </activity>
@@ -28,6 +29,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter></activity>
+
     </application>
 
 </manifest>
