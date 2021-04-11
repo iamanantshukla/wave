@@ -26,7 +26,7 @@ public class ChooseOrganisation extends AppCompatActivity implements  organisati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_organisation);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         recyclerView=findViewById(R.id.orgRecycler);
         editOrg=findViewById(R.id.editOrg);

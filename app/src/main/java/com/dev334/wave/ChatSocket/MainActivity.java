@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private Socket mSocket;
     {
         try {
-            mSocket = IO.socket("https://bee-server-new.herokuapp.com");
+            mSocket = IO.socket("https://waveserver.herokuapp.com/"); //"https://bee-server-new.herokuapp.com"
         } catch (URISyntaxException e) {}
     }
 
@@ -92,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
             mSocket.connect();
+            mSocket.on("join-room", new Emitter.Listener() {
+                @Override
+                public void call(Object... args) {
+                    mSocket.emit("room", Username);
+                }
+            });
             mSocket.on("connect user", onNewUser);
             mSocket.on("chat message", onNewMessage);
             mSocket.on("on typing", onTyping);
