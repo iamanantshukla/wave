@@ -116,6 +116,7 @@ public class CreateProfile extends AppCompatActivity {
         map.put("Organisation", Organisation);
         map.put("Facebook", Facebook);
         map.put("Instagram", Instagram);
+        map.put("UserID", mAuth.getCurrentUser().getUid());
         map.put("Bio","");
         map.put("ProfilePic","");
         map.put("PhoneNumber", PhoneNo);

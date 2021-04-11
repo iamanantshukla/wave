@@ -279,6 +279,7 @@ public class EditProfile extends AppCompatActivity {
                     @Override
                     public void onSuccess(Uri uri) {
                         ImageUri=uri.toString();
+                        Log.i("ImageUpload", "onSuccess: "+ImageUri);
                     }
                 });
 
