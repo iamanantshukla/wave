@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.dev334.wave.Database.TinyDB;
+import com.dev334.wave.EditProfile;
 import com.dev334.wave.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -169,11 +170,11 @@ public class profileFragment extends Fragment {
 
         //Edit Profile
         BtnEditProf.setOnClickListener(v->{
-            //Intent i=new Intent(getActivity(), EditProfile.class);
-            //startActivity(i);
+            Intent i=new Intent(getActivity(), EditProfile.class);
+            startActivity(i);
         });
 
-        //setUpProfile();
+        setUpProfile();
 
 
         return view;
