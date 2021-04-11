@@ -5,10 +5,13 @@
     <color name="Dark">#040309</color>
     <color name="SecondaryDark">#535167</color>
     <color name="Primary">#3552ED</color>
+    <color name="Purple">#7263AE</color>
+    <color name="PurpleLight">#9792CB</color>
+
     <color name="Secondary">#5502AF</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="alphaPrimary">#66040309</color>
     <color name="alpha2Primary">#B3040309</color>
-    <color name="Font">#555D50</color>
+    <color name="Font">#7A7A7A</color>
 </resources>
