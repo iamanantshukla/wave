@@ -1,56 +1,54 @@
 package com.dev334.wave.Home;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.dev334.wave.Database.TinyDB;
+import com.dev334.wave.MeetingAdapter;
+import com.dev334.wave.MeetingModel;
+import com.dev334.wave.NewMeeting;
 import com.dev334.wave.R;
-import com.dev334.wave.VideoCall;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import org.jitsi.meet.sdk.JitsiMeet;
 import org.jitsi.meet.sdk.JitsiMeetActivity;
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
 
-import java.io.ByteArrayOutputStream;
+import java.lang.reflect.MalformedParameterizedTypeException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 //import id.zelory.compressor.Compressor;
 
 
-public class VideoCallFragment extends Fragment {
+public class VideoCallFragment extends Fragment implements MeetingAdapter.SelectedPager {
 
     EditText secretCode;
     Button joinBtn;
+    RecyclerView MeetingRecycler;
+    private List<MeetingModel> meetingModels;
+    private MeetingAdapter meetingAdapter;
+    private TinyDB tinyDB;
+    private Map<String, Object> map;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,9 +61,14 @@ public class VideoCallFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_video_call, container, false);
-        secretCode=view.findViewById(R.id.code);
-        joinBtn=view.findViewById(R.id.join);
+        MeetingRecycler=view.findViewById(R.id.MeetingRecycler);
+        //secretCode=view.findViewById(R.id.code);
+        joinBtn=view.findViewById(R.id.createNewBtn);
         URL serverURL;
+        map=new HashMap<>();
+
+        tinyDB=new TinyDB(getContext());
+        map=tinyDB.getObject("UserProfile",map.getClass());
 
         try{
             serverURL=new URL("https://meet.jit.si");
@@ -84,19 +87,45 @@ public class VideoCallFragment extends Fragment {
         joinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                JitsiMeetConferenceOptions options=new JitsiMeetConferenceOptions.Builder()
-                        .setRoom(secretCode.getText().toString())
-                        .setWelcomePageEnabled(false)
-                        .build();
-                JitsiMeetActivity.launch(getContext(),options);
+                Intent i=new Intent(getActivity(), NewMeeting.class);
+                i.putExtra("Org",map.get("Organisation").toString());
+                startActivity(i);
             }
         });
 
+        meetingModels=new ArrayList<>();
 
+        meetingAdapter=new MeetingAdapter(meetingModels,this);
+        MeetingRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        MeetingRecycler.setHasFixedSize(true);
+        MeetingRecycler.setAdapter(meetingAdapter);
+
+        fetchCurrentMeetings();
 
         return view;
     }
 
+    private void fetchCurrentMeetings() {
+        FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
+        Log.i("Meetings", "fetchCurrentMeetings: "+map.get("Organisation").toString());
+        firebaseFirestore.collection("Meeting").whereEqualTo("Org",map.get("Organisation").toString())
+                .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                Log.i("Meeting", "onSuccess: "+queryDocumentSnapshots.size());
+                for(DocumentSnapshot snapshot:queryDocumentSnapshots){
+                    meetingModels.add(snapshot.toObject(MeetingModel.class));
+                    meetingAdapter.notifyDataSetChanged();
+                }
+                meetingAdapter.notifyDataSetChanged();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                e.printStackTrace();
+            }
+        });
+    }
 
 
     @Override
@@ -109,4 +138,13 @@ public class VideoCallFragment extends Fragment {
         super.onResume();
 
             }
+
+    @Override
+    public void selectedpager(MeetingModel meetingModel) {
+        JitsiMeetConferenceOptions options=new JitsiMeetConferenceOptions.Builder()
+                .setRoom(meetingModel.getCode())
+                .setWelcomePageEnabled(false)
+                .build();
+        JitsiMeetActivity.launch(getContext(),options);
+    }
 }

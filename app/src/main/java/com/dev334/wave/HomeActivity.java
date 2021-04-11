@@ -8,7 +8,6 @@ import android.os.Bundle;
 
 import com.dev334.wave.Home.VideoCallFragment;
 import com.dev334.wave.Home.homeFragment;
-import com.dev334.wave.Home.messageFragment;
 import com.dev334.wave.Home.profileFragment;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
@@ -17,7 +16,6 @@ public class HomeActivity extends AppCompatActivity {
     private ChipNavigationBar bottomNavigation;
     private homeFragment homeFrag;
     private profileFragment profileFrag;
-    private messageFragment msgFrag;
     private FragmentManager fragmentManager;
     private VideoCallFragment videoCallFragment;
     @Override
@@ -28,7 +26,6 @@ public class HomeActivity extends AppCompatActivity {
 
         homeFrag=new homeFragment();
         profileFrag=new profileFragment();
-        msgFrag=new messageFragment();
         videoCallFragment=new VideoCallFragment();
         bottomNavigation=findViewById(R.id.bottom_navigation_bar);
 
@@ -44,9 +41,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(int i) {
                 switch (i){
-                    case R.id.nav_msg:
-                        replaceFragment(msgFrag);
-                        break;
                     case R.id.nav_profile:
                         replaceFragment(profileFrag);
                         break;
