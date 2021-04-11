@@ -41,7 +41,7 @@ public class NewMeeting extends AppCompatActivity {
                 }else if(nMdesc.getText().toString().isEmpty()){
                     nMdesc.setError("Empty");
                 }else{
-                    String code=randomAlphaNumeric(5);
+                    String code=randomAlphaNumeric(3);
                     addToFirebase(code);
                 }
             }
@@ -77,7 +77,7 @@ public class NewMeeting extends AppCompatActivity {
         });
     }
 
-    private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static String randomAlphaNumeric(int count) {
         StringBuilder builder = new StringBuilder();
         while (count-- != 0) {

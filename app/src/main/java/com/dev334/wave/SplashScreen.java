@@ -53,9 +53,11 @@ public class SplashScreen extends AppCompatActivity {
                         tinyDB.putObject("UserProfile", map);
                         Intent i=new Intent(SplashScreen.this, HomeActivity.class);
                         startActivity(i);
+                        finish();
                     }else{
                         Intent i=new Intent(SplashScreen.this, CreateProfile.class);
                         startActivity(i);
+                        finish();
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
