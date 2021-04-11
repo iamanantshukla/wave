@@ -50,10 +50,12 @@ public class MainActivity extends AppCompatActivity {
     private int time = 2;
 
     private Socket mSocket;
+
     {
         try {
             mSocket = IO.socket("https://waveserver.herokuapp.com/"); //"https://bee-server-new.herokuapp.com"
-        } catch (URISyntaxException e) {}
+        } catch (URISyntaxException e) {
+        }
     }
 
     @SuppressLint("HandlerLeak")
@@ -92,12 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
             mSocket.connect();
-            mSocket.on("join-room", new Emitter.Listener() {
-                @Override
-                public void call(Object... args) {
-                    mSocket.emit("room", Username);
-                }
-            });
+            mSocket.emit("room", getIntent().getStringExtra("Interest"));
             mSocket.on("connect user", onNewUser);
             mSocket.on("chat message", onNewMessage);
             mSocket.on("on typing", onTyping);
@@ -149,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                     onTyping.put("username", Username);
                     onTyping.put("uniqueId", uniqueId);
                     mSocket.emit("on typing", onTyping);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
