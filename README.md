@@ -6,7 +6,7 @@
 
 
 ## Introduction:
-    Wave is an Android based social networking service. It enables it's users to find like minded individuals in their organisation and interact with them using group messages chats and video calling. 
+    Wave is an Android based social networking service. It enables it's users to find like minded individuals in their organisation and interact with them using group messages chats and video calling. With the pandemic hitting us hard, the app will greatly help users improve relations and make new ones too
   
 ## Demo Video Link:
   <a href="https://drive.google.com/drive/folders/13eHRc0EbYNiK0b1sKeRRxhI-0Ku3Q0Se?usp=sharing">https://drive.google.com/drive/folders/13eHRc0EbYNiK0b1sKeRRxhI-0Ku3Q0Se?usp=sharing</a>
