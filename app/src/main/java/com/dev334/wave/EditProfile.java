@@ -198,6 +198,7 @@ public class EditProfile extends AppCompatActivity {
         nMap.put("Bio",Bio);
         nMap.put("Organisation", map.get("Organisation"));
         nMap.put("Interest",Interests);
+        nMap.put("UserID", mAuth.getCurrentUser().getUid());
         nMap.put("PhoneNumber",map.get("PhoneNumber"));
         nMap.put("ProfilePic",ImageUri);
 

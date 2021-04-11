@@ -142,6 +142,7 @@ public class EmailLogin extends AppCompatActivity {
                                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(EmailLogin.this,
                                                 new Pair<View, String>(emailLayout, "emailTransition"));
                                         startActivity(i, options.toBundle());
+                                        finish();
                                     }else{
                                         Toast.makeText(getApplicationContext(),"Verify your email", Toast.LENGTH_SHORT).show();
                                     }
@@ -207,6 +208,7 @@ public class EmailLogin extends AppCompatActivity {
                             i.putExtra("Method",1);
                             i.putExtra("GoogleIDToken",idToken);
                             startActivity(i);
+                            finish();
 
                         } else {
                             // If sign in fails, display a message to the user.

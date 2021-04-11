@@ -128,6 +128,7 @@ public class CreateProfile extends AppCompatActivity {
                 Toast.makeText(CreateProfile.this, "Profile Created", Toast.LENGTH_SHORT).show();
                 Intent i=new Intent(CreateProfile.this, HomeActivity.class);
                 startActivity(i);
+                finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

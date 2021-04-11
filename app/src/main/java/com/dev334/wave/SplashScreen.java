@@ -44,6 +44,7 @@ public class SplashScreen extends AppCompatActivity {
         if(mAuth.getCurrentUser()==null){
             Intent i=new Intent(SplashScreen.this, LoginHome.class);
             startActivity(i);
+            finish();
         }else{
             firestore.collection("Users").document(mAuth.getCurrentUser().getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 @Override
