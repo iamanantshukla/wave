@@ -9,10 +9,10 @@
     Wave
   
 ## Demo Video Link:
-  <a href="https://youtu.be/dQw4w9WgXcQ">https://youtu.be/dQw4w9WgXcQ</a>
+  <a href="https://drive.google.com/drive/folders/13eHRc0EbYNiK0b1sKeRRxhI-0Ku3Q0Se?usp=sharing">https://drive.google.com/drive/folders/13eHRc0EbYNiK0b1sKeRRxhI-0Ku3Q0Se?usp=sharing</a>
   
 ## Presentation Link:
-  <a href="https://docs.google.com/presentation/d/1NEbqpM6J6UkmHN_J6NsgOhKvDU6fkfnli4OIg1lh-pk/edit?usp=sharing"> ppt link here </a>
+  <a href="https://drive.google.com/drive/folders/1kgwOT4zmnWE48tzmG8Smdu5p6q12DL2f?usp=sharing"> https://drive.google.com/drive/folders/1kgwOT4zmnWE48tzmG8Smdu5p6q12DL2f?usp=sharing </a>
   
   
 ## Table of Contents:
